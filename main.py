@@ -31,7 +31,7 @@ def home():
 
     return render_template('index.html', form=form)
 
-@app.route('/result')
+@app.route('/result', methods=['GET'])
 def result():
     # Usando o modulo request.args para pegar as informações enviadas pelo formulario
     cat_a = float(request.args.get('cat_a'))
