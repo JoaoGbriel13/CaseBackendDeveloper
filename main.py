@@ -36,7 +36,7 @@ def calculadora():
 
     return render_template('calculadora.html', form=form)
 
-@app.route('/result?cat_a?cat_b', methods=['GET'])
+@app.route('/result', methods=['GET'])
 def result():
     # Usando o modulo request.args para pegar as informações enviadas pelo formulario
     cat_a = float(request.args.get('cat_a'))
