@@ -14,3 +14,7 @@ Utilizei as seguintes linguagems e frameworks para minha aplicação:
 O site tem um design bem básico, uma navbar com bootstrap e um formulario também com ele e renderizado com o WTForms, o usuário passa os dois angulos dos catetos e o site retorna um JSON com o resultado final da operação.
 Além disso, é completamente fácil de se conseguir utilizar o site como uma API, bastanto apenas o usuário passar como querys o angulo dos catetos A e B.
 Abaixo, segue a documentação da API que foi feita com o aplicativo Postman Agent, onde o usuário pode testar formas de requisição para a API:
+https://documenter.getpostman.com/view/25386634/2s8ZDYZNUo
+
+Também está no ar, um site com o projeto final feito no Render pois o GitHUB pages não aceita projetos feitos com o flask:
+https://teorema-pitagoras.onrender.com
