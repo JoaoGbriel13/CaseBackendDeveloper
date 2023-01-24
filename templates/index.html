@@ -1,16 +1,15 @@
 {% extends "base.html" %}
-{% from 'bootstrap4/form.html' import render_form %}
-{% block content %}
 
+{% block content %}
 <body>
-    <nav class="navbar navbar-expand-lg bg-danger">
-        <a class="navbar-brand">Pitágoras</a>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <a href="{{ url_for('home') }}" class="navbar-brand">Pitágoras</a>
     </nav>
 
-<!-- Form para fazer o request pra API -->
-    <div class="form row g-3 ml-4 align-itens-center">
-        {{ render_form(form) }}
+    <div class="container mt-5 text-center align-items-center">
+        <h1>Bem vindo à Calculadora do Teorema de Pitágoras</h1>
+        <br>
+        <a href="{{ url_for('calculadora') }}" class="btn btn-danger">Clique aqui para testar</a>
     </div>
-
 </body>
 {% endblock %}

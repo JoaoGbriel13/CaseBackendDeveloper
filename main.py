@@ -19,8 +19,13 @@ class Form(FlaskForm):
     submit = SubmitField('Submit')
 
 # Criando a rota para a renderizar o HTML
-@app.route('/', methods=['GET', 'POST'])
+
+@app.route('/')
 def home():
+    return render_template('index.html')
+
+@app.route('/calculadora', methods=['GET', 'POST'])
+def calculadora():
     form = Form()
 
     # Validando o formulario e pegando os itens para retornar o calculo do teorema
@@ -29,9 +34,9 @@ def home():
         cat_b = form.cateto_b.data
         return redirect(url_for('result', cat_a=cat_a, cat_b=cat_b))
 
-    return render_template('index.html', form=form)
+    return render_template('calculadora.html', form=form)
 
-@app.route('/result', methods=['GET'])
+@app.route('/result?cat_a?cat_b', methods=['GET'])
 def result():
     # Usando o modulo request.args para pegar as informações enviadas pelo formulario
     cat_a = float(request.args.get('cat_a'))

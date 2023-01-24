@@ -2,3 +2,14 @@ nav a{
     color : white;
 }
 
+.align-itens-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    color: white;
+}
+
+body{
+    background-color: #046582;
+}
